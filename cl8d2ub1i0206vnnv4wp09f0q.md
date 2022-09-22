@@ -21,8 +21,8 @@ I don’t want to go too deep into it, but if you want to explore more, Confluen
 Likewise, there are scenarios where Kafka may not be the best to use. Just mentioning as something to keep in mind and do our research when we are solving real-world problems.
 
 Let us keep things simple and beginner-friendly in this article to help you get started. You should be able to follow along even if you are an absolute beginner in programming and computer science. You can focus more on the logical flow. Think of each module or function here as a black box and how you can use them to bring your logic to life.
-<hr class="custom-hr"/>
-<h3 class="custom-h3">🖥️ Phase 1: Setting up your development environment</h3>
+<hr id="custom-hr"/>
+<h3 id="custom-h3">🖥️ Phase 1: Setting up your development environment</h3>
 It is not very straightforward to use Kafka in a Windows system. You will need something called WSL 2 (Windows Subsystem For Linux). It helps you run a Linux environment on your Windows PC where you can run Kafka.
 1. You can set up WSL 2 following the steps in [this blog](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/). Follow them till the installation of Java in the Linux terminal.
 2. If the Linux kernel update package doesn’t install properly, you can restart your system and try again. It should work then.
@@ -68,9 +68,9 @@ $ code .
 ```
 We are all set to write some code now. Make sure that you are in the correct project directory in VS Code. You should also see one subfolder in it for the virtual python environment we created before.
 
-<hr class="custom-hr"/>
+<hr id="custom-hr"/>
 
-<h3 class="custom-h3">🖥️ Phase 2: Streaming Data</h3>
+<h3 id="custom-h3">🖥️ Phase 2: Streaming Data</h3>
 For now, we just need to know two things about Kafka:
 1. A producer is something that produces data. Pretty straightforward. The producer is where we fetch the data and send it to the Kafka cluster in real time.
 2. A consumer reads the data sent by the producer. Here, we can do whatever we want with the data we keep receiving from the producer.
@@ -135,7 +135,7 @@ Note the following:
 4. Once you read the data in your consumer, you can do anything with it. For example, you can extract some variables from this data and pass it on to a deep learning model to predict something and print your prediction.
 5. You could write some logic and send an alert if some conditions are met. You could also plot the data as a graph on some web page to get a real-time graph.
 6. What you can do is limited by your imagination.
-<hr class="custom-hr"/>
+<hr id="custom-hr"/>
 Now, you should run both the producer and the consumer in separate terminals. You can open these terminals as split terminals in VS Code itself and then use the python run command.
 ```
 python producer.py
@@ -144,12 +144,12 @@ Note that the other terminals for Zookeeper and Kafka servers need to be running
 In the example we explored, the output will look something like this.
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1663850278404/KuBWL38Aa.png align="center")
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1663850290003/Ex4C4S92p.png align="center")
-<hr class="custom-hr"/>
+<hr id="custom-hr"/>
 To stop the execution in all the terminals, you can use `ctrl + c`. After running your tests and tinkering with your code, you can run the below command if you want to delete any of the events and data in your Kafka environment.
 ```
 $ rm -rf /tmp/kafka-logs /tmp/zookeeper
 ```
 I plan to write another tutorial with a slightly more advanced use case and use deep learning models with streaming data. I will update it here once it is done. #StayTuned
-<hr class="custom-hr"/>
+<hr id="custom-hr"/>
 Note: If you notice any errata in my understanding, feel free to reach out and let me know of the same, and I will update the blog post accordingly.
 This article was first published on  Medium [here](https://bit.ly/trn-kafka-python).
